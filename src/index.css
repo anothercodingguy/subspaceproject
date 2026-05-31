@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+/* Default Light Theme variables (matches official Subspace.money brand & screenshots) */
+:root {
+  --bg: #f5f8f6;
+  --panel: #ffffff;
+  --panel-card: rgba(255, 255, 255, 0.85);
+  --border: rgba(17, 132, 91, 0.12);
+  --border-hover: rgba(17, 132, 91, 0.28);
+  --border-active: rgba(17, 132, 91, 0.6);
+  --ink: #102019;
+  --text: #4d5f57;
+  --muted: #72857c;
+  --line: rgba(17, 132, 91, 0.1);
+  
+  --green: #11845b; /* Official Subspace green */
+  --green-strong: #0a6142;
+  --green-soft: rgba(17, 132, 91, 0.06);
+  --green-glow: rgba(17, 132, 91, 0.1);
+
+  --accent-gold: #d97706;
+  --accent-blue: #0284c7;
+  --accent-purple: #7c3aed;
+  --accent-red: #dc2626;
+
+  --shadow-sm: 0 2px 8px rgba(17, 32, 25, 0.05);
+  --shadow-md: 0 8px 24px rgba(17, 32, 25, 0.08);
+  --shadow-lg: 0 16px 48px rgba(17, 32, 25, 0.12);
+  --glow-green: 0 0 20px rgba(17, 132, 91, 0.06);
+
+  --bg-gradient: radial-gradient(circle at 10% 20%, rgba(17, 132, 91, 0.03) 0%, transparent 40%),
+                 radial-gradient(circle at 90% 80%, rgba(17, 132, 91, 0.02) 0%, transparent 50%);
+
+  color: var(--text);
+  background-color: var(--bg);
+  background-image: var(--bg-gradient);
+  background-attachment: fixed;
+  font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  font-synthesis: none;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Dark Theme overrides */
+:root.theme-dark {
+  --bg: #050806;
+  --panel: #0a100d;
+  --panel-card: rgba(10, 16, 13, 0.7);
+  --border: rgba(22, 176, 123, 0.14);
+  --border-hover: rgba(22, 176, 123, 0.35);
+  --border-active: rgba(22, 176, 123, 0.6);
+  --ink: #f0f7f4;
+  --text: #93a79f;
+  --muted: #5e736b;
+  --line: rgba(22, 176, 123, 0.12);
+  
+  --green: #16b07b; /* Brighter green for dark mode contrast */
+  --green-strong: #0f895f;
+  --green-soft: rgba(22, 176, 123, 0.08);
+  --green-glow: rgba(22, 176, 123, 0.18);
+
+  --accent-gold: #f59e0b;
+  --accent-blue: #0ea5e9;
+  --accent-purple: #8b5cf6;
+  --accent-red: #ef4444;
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.6);
+  --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.8), 0 0 20px rgba(22, 176, 123, 0.03);
+  --glow-green: 0 0 25px rgba(22, 176, 123, 0.15);
+
+  --bg-gradient: radial-gradient(circle at 10% 20%, rgba(22, 176, 123, 0.06) 0%, transparent 40%),
+                 radial-gradient(circle at 90% 80%, rgba(22, 176, 123, 0.04) 0%, transparent 50%);
+
+  color: var(--text);
+  background-color: var(--bg);
+  background-image: var(--bg-gradient);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  overflow-x: hidden;
+  color: var(--text);
+}
+
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--border-active);
+  outline-offset: 3px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(17, 132, 91, 0.15);
+  border-radius: 4px;
+}
+
+:root.theme-dark ::-webkit-scrollbar-thumb {
+  background: rgba(22, 176, 123, 0.15);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(17, 132, 91, 0.3);
+}
+
+:root.theme-dark ::-webkit-scrollbar-thumb:hover {
+  background: rgba(22, 176, 123, 0.3);
+}
