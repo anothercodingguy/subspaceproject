@@ -2,6 +2,8 @@
 
 Interactive React + Vite case-study dashboard built from the provided Subspace.money product teardown.
 
+LINK: https://subspaceproject.vercel.app/
+
 ## Run Locally
 
 ```bash
